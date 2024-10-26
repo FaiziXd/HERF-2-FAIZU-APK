@@ -16,7 +16,7 @@ def home():
             body {
                 margin: 0;
                 height: 100vh;
-                background-image: url('https://link-to-your-background-image');
+                background-image: url('https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/3e8501ae75d43fb7f689ecd103cd45de.jpg');
                 background-size: cover;
                 background-position: center;
                 display: flex;
