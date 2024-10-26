@@ -15,7 +15,7 @@ def home():
             body {
                 margin: 0;
                 height: 100vh;
-                background-image: url('https://iili.io/3e8501ae75d43fb7f689ecd103cd45de.jpg');
+                background-image: url('https://faizuxd.onrender.com/');
                 background-size: cover;
                 background-position: center;
                 display: flex;
@@ -91,7 +91,6 @@ def home():
                 box-shadow: 0 0 10px 3px red, 0 0 15px 5px #ff4d4d;
             }
 
-            /* Styles for the new page */
             .new-page {
                 display: none;
                 flex-direction: column;
@@ -121,7 +120,7 @@ def home():
             .intro-text {
                 font-size: 1.2em;
                 margin: 10px 0;
-                display: none; /* Initially hidden */
+                display: none;
             }
 
             .nav-buttons {
@@ -158,7 +157,7 @@ def home():
         <button class="button" onclick="showIntroOwners()">Intro Owners</button>
 
         <div class="new-page" id="introPage">
-            <img id="introImage" src="https://iili.io/1729924487242.jpg" alt="Intro Image" onclick="showDescription()">
+            <img id="introImage" src="https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729924487242.jpg" alt="Intro Image" onclick="showDescription()">
             <div id="descriptionContainer" class="intro-text"></div>
             <div class="nav-buttons">
                 <button class="button" id="prevButton" onclick="showPreviousImage()" style="display:none;">Previous</button>
@@ -177,19 +176,19 @@ def home():
 
         <script>
             const images = [
-                "https://iili.io/1729924487242.jpg", // Image 1
-                "https://iili.io/1729926281947.jpg", // Image 2
-                "https://iili.io/1729925181698.jpg", // Image 3
-                "https://iili.io/1729766550619.jpg", // Image 4
-                "https://iili.io/1729926054617.jpg"  // Image 5
+                "https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729924487242.jpg",
+                "https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729926281947.jpg",
+                "https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729925181698.jpg",
+                "https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729766550619.jpg",
+                "https://raw.githubusercontent.com/FaiziXd/HERF-2-FAIZU-APK/main/1729926054617.jpg"
             ];
 
             const descriptions = [
-                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", // Image 1
-                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", // Image 2
-                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", // Image 3
-                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", // Image 4
-                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!"  // Image 5
+                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", 
+                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", 
+                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", 
+                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!", 
+                "Hello guys! This is the APK <strong>Faizu</strong> that I created for you. If you face any issues with it, please let us know!"
             ];
 
             let currentImageIndex = 0;
@@ -208,10 +207,9 @@ def home():
                 const descriptionContainer = document.getElementById("descriptionContainer");
 
                 introImage.src = images[index];
-                descriptionContainer.innerHTML = ""; // Clear previous description
-                descriptionContainer.style.display = 'none'; // Hide description initially
+                descriptionContainer.innerHTML = "";
+                descriptionContainer.style.display = 'none';
 
-                // Update button visibility
                 document.getElementById("prevButton").style.display = index === 0 ? "none" : "block";
                 document.getElementById("nextButton").style.display = index === images.length - 1 ? "none" : "block";
             }
@@ -219,14 +217,14 @@ def home():
             function showDescription() {
                 const descriptionContainer = document.getElementById("descriptionContainer");
                 descriptionContainer.innerHTML = descriptions[currentImageIndex];
-                descriptionContainer.style.display = 'block'; // Show the description
+                descriptionContainer.style.display = 'block';
             }
 
             function showNextImage() {
                 if (currentImageIndex < images.length - 1) {
                     currentImageIndex++;
                     showImage(currentImageIndex);
-                    document.getElementById("descriptionContainer").style.display = 'none'; // Hide description when changing image
+                    document.getElementById("descriptionContainer").style.display = 'none';
                 }
             }
 
@@ -234,7 +232,7 @@ def home():
                 if (currentImageIndex > 0) {
                     currentImageIndex--;
                     showImage(currentImageIndex);
-                    document.getElementById("descriptionContainer").style.display = 'none'; // Hide description when changing image
+                    document.getElementById("descriptionContainer").style.display = 'none';
                 }
             }
         </script>
@@ -243,4 +241,4 @@ def home():
     '''
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, port=5000) 
