@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import os  # Make sure to import os
+import os
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def home():
             body {
                 margin: 0;
                 height: 100vh;
-                background-image: url('https://faizuxd.onrender.com/');
+                background-image: url('https://link-to-your-background-image');
                 background-size: cover;
                 background-position: center;
                 display: flex;
@@ -154,7 +154,7 @@ def home():
             <h1>FAIZU X3 WAQAS</h1>
         </div>
         <p>Select an Option:</p>
-        <button class="button" onclick="alert('Multi Selected!')">Multi</button>
+        <button class="button" onclick="window.location.href='https://faizuxd.onrender.com/'">Multi</button>
         <button class="button" onclick="showIntroOwners()">Intro Owners</button>
 
         <div class="new-page" id="introPage">
@@ -244,4 +244,3 @@ def home():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
-    
